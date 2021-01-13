@@ -118,7 +118,8 @@ reverse path
 ```
 
 ### Visualization
-Here you can clearly see that BFS does not look at connection costs it goes straight through the mud forming the shortest path visually, but in reality the path is longer because of the cost of the connections. BFS has one similar thing as the Dijkstra methed, and that is the visited nodes (white circles). This is because they both search in a almost unbiased way and search in all the directions. The only differance between the two is that Dijkstra starts with the smallest cost. But BFS just starts at a predetermined node.
+Here you can clearly see that BFS does not look at connection costs it goes straight through the mud forming the shortest path visually, but in reality the path is longer because of the cost of the connections. BFS has one similar thing as the Dijkstra methed, and that is the visited nodes (white circles). This is because they both search in a almost unbiased way and search in all the directions. The only differance between the two is that Dijkstra starts with the smallest cost. But BFS just starts at a predetermined node. In the second picture you can see that the path isn't in a straight line this just happened to be like this because the cost of diagonal, vertical and horizontal doesn't 
+matter in BFS.
 
 This path was found in 190ms.
 
