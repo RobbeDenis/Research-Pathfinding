@@ -67,10 +67,17 @@ Blue squares are gaps in the graph (water)
 
 The white circles are all the nodes that have been visited
 
-As you can see because the algorithm takes the connection cost into account. The path is formed around the mud. It looks longer if you look at it, but because the cost gets doubled on the mud squares, the algorithm actually got a faster path then if he would just go through in a straight line.
+As you can see because the algorithm takes the connection cost into account. The path is formed around the mud. It looks longer if you look at it, but because the cost gets 
+doubled on the mud squares, the algorithm actually got a faster path then if he would just go through in a straight line.
 
+This path was found in 270ms.
 
 ![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/Dijkstra01.png)
+
+This path was found in 140ms.
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/Dijkstra02.png)
+
 
 ## Breadth first search
 ### what is BFS?
@@ -109,3 +116,14 @@ add start node to path
 
 reverse path
 ```
+
+### Visualization
+Here you can clearly see that BFS does not look at connection costs it goes straight through the mud forming the shortest path visually, but in reality the path is longer because of the cost of the connections. BFS has one similar thing as the Dijkstra methed, and that is the visited nodes (white circles). This is because they both search in a almost unbiased way and search in all the directions. The only differance between the two is that Dijkstra starts with the smallest cost. But BFS just starts at a predetermined node.
+
+This path was found in 190ms.
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/BFS01.png)
+
+This path was found in 138ms.
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/BFS02.png)
