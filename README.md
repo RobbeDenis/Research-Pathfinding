@@ -57,3 +57,15 @@ while openlist is not empty
 ```
 
 ### Visualization
+
+
+## Breadth first search
+### what is BFS?
+BFS is an algorithm made by Konrad Zuse it was firstly used in pathfinding by Edward Forrest Moore, He used it for finding the shortest route in a maze.
+### How does it work?
+BFS does not use connection costs because it asumes that every connection is the same. The algorithm starts with the start node. It looks at all the connected nodes. If the destination isn't one of them he will look at the nodes connected to them. this goes on until the destination is found.
+is one of them
+### Pseudocode c++
+```cpp
+code
+```
