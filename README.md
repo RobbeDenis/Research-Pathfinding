@@ -191,3 +191,9 @@ This path was found in 340ms.
 This path was found in 19ms.
 
 ![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/AStar02.png)
+
+
+## references
+- Dijkstra's algorithm explained
+https://www.youtube.com/watch?v=pVfj6mxhdMw&list=PLa7CE3Zs6bqLee4c8PmApqcXVu__sleN3&index=1&t=20s
+
