@@ -60,7 +60,7 @@ namespace Elite
 				nextNode.pNode = m_pGraph->GetNode(pConnection->GetTo());
 				nextNode.pConnectionToPrevNode = pConnection;
 
-				// check if this node has already been visited, if so skip
+				// check if this node has already been visited, if so skip.
 				auto visitedNodeIt = std::find(begin(visited), end(visited), nextNode);
 				if (visitedNodeIt != end(visited))
 					continue;
