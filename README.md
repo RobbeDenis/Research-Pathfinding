@@ -127,3 +127,66 @@ This path was found in 190ms.
 This path was found in 138ms.
 
 ![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/BFS02.png)
+
+
+## AStar
+### what is AStar?
+AStar is an algorithm published by Peter Hart, Nils Nilsson and Bertram Raphael. The algorithm works almost the same as Dijkstra's. The difference is that AStar works with heuristics. A calculation that makes it so that the algorithm will choose some nodes over others when searching for the destination.
+### How does it work?
+AStar Will find the best connection from the destination node to the other nodes. The other nodes are chosen and calculated with Heuristics. These are calculations that take 
+the position of the destination in to account. By depending on the position off the destination the search path will form to the destination (biased) istead of forming a search 
+path around the start node. This can cause some problems in complex environments, but in less complex environments this will be much faster then other algorithms.
+### Pseudocode c++
+```cpp
+// NodeRecord contains (node, connection, costSoFar, estimatedTotalCost)
+vector<node> path;
+vector<NodeRecord> openList;
+vector<NodeRecord> closedList;
+NodeRecord currentNode;
+
+startRecord estimatedTotalCost = Heuristic between startNode and DestinationNode
+startRecord node = startNode
+add startRecord to openList
+
+while openList is not empty
+{
+  find the closest node to destinationNode in openList// using the estimatedTotalCost
+  currentNode = closestNode
+  
+  if currentNode == destinationNode
+  
+  for each connection to currentNode
+  { 
+    remove node from closedList if it has bigger cost then connectedNode
+      else continue
+    
+    remove node from openList if it has bigger cost then connectedNode
+      else continue
+    
+    create new nodeRecord equal to the connected node
+    set theestimatedTotalCost to the cost + HeuristicCost
+    add new node to openList
+  }
+  
+  add currentNode to closedList
+  remove currentNode from openList
+}
+
+  track beck the nodes in closedList to startNode
+  assign that path to path
+  
+  reverse path
+```
+
+### Visualization
+You can see that AStar can have some problems in complex environments compared to the other algorithms. You can also see that AStar doesn't necessarily give the best path like
+Dijkstra (top left corner in the mud). But once you look at the less complex environment you can see a huge improvement in the speed of the algorithm.
+
+
+This path was found in 340ms.
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/AStar01.png)
+
+This path was found in 19ms.
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/AStar02.png)
