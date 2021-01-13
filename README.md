@@ -67,5 +67,32 @@ BFS does not use connection costs because it asumes that every connection is the
 is one of them
 ### Pseudocode c++
 ```cpp
-code
+vector<node> path // path form start to destination
+queue<node> openList // nodes that still have to be searched
+map<node, node> closedList // nodes that have been searched
+node currentNode
+
+add startNode to openList
+
+while openlist is not empty
+{
+  currentNode = the first of openList
+  
+  if currentNode == destination node // stop if destination has been found
+    break
+  
+  for each connection to currentNode
+    if connectedNode is not in closed list
+      remove connectedNode from openList
+      add currentNode to closedList with key connectedNode
+}
+
+while currentNode != startNode // track back until startNode
+{
+  add currentNode to path
+  set currentNode to closedList with key currentNode
+}
+add start node to path
+
+reverse path
 ```
