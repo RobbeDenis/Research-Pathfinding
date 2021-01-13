@@ -57,7 +57,20 @@ while openlist is not empty
 ```
 
 ### Visualization
+Horizontal and Vertical cost = 1
 
+Diagonal cost = 1.5
+
+brown square = cost * 2 (mud)
+
+Blue squares are gaps in the graph (water)
+
+The white circles are all the nodes that have been visited
+
+As you can see because the algorithm takes the connection cost into account. The path is formed around the mud. It looks longer if you look at it, but because the cost gets doubled on the mud squares, the algorithm actually got a faster path then if he would just go through in a straight line.
+
+
+![Formation Slection img](https://github.com/rob-den/Research-Pathfinding/blob/master/Dijkstra01.png)
 
 ## Breadth first search
 ### what is BFS?
